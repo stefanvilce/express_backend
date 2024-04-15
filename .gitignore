@@ -129,5 +129,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+
 .connection.js
-connection.js
+*connection.js
