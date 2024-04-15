@@ -9,22 +9,7 @@ import hoursRouter from './routes/hours.js';
 const app = express();
 const port = 3100;
  
-/*
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'fane123',
-    database: 'pontaj'
-  });
-   
-  connection.connect((error) => {
-    if (error) {
-      console.error(error);
-    } else {
-      console.log('Connected to the database');      
-    }
-  });
-  */
+
 
   const rootLink4APIs = "/";
 
@@ -33,20 +18,6 @@ const connection = mysql.createConnection({
   app.use(rootLink4APIs, projectRouter);
   app.use(rootLink4APIs, userRouter);
   app.use(rootLink4APIs, hoursRouter);
-
-
-	/*
-  app.get('/projects', (_request, response) => {
-    connection.query('SELECT * FROM projects', (error, data) => {
-      if (error) {
-        console.error(error);
-        response.status(500).send('Error retrieving projects');
-      } else {
-        response.send(data);
-      }
-    });
-  });
-  */
 
 
   app.listen(port, () => {
